@@ -3,10 +3,12 @@
 cam cli is a command-line tool for creating boilerplate code for various types of applications including vanilla JavaScript frontend web apps, Python module, Flask app, and etc.
 
 ### Installation
-You can install cam cli using pip and pip3:
+[You can install cam cli using pip and pip3:](https://pypi.org/project/cam-cli-tool/)
+
   ```shell
-  pip3 install cam
+  pip3 install cam-cli-tool
   ```
+
 
 ### Command list
   - cam create-js-app .
