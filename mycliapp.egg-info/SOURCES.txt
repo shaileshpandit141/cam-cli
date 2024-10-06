@@ -15,6 +15,7 @@ cam/run/__init__.py
 cam/run/run.py
 cam/templates/__init__.py
 cam/utils/__init__.py
+cam/utils/format.py
 mycliapp.egg-info/PKG-INFO
 mycliapp.egg-info/SOURCES.txt
 mycliapp.egg-info/dependency_links.txt
