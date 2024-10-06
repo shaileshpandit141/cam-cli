@@ -49,8 +49,11 @@ def controller():
                 cam create-js-app command required an app_name or . for current directory.
 
                 Example:
-                :: cam create-js-app <app_name>    <- create an app with specific app name.
-                :: cam create-js-app .    <- create an app with in the current directiory.
+                create an app with specific app name.
+                :: cam create-js-app <app_name>
+                
+                create an app with in the current directiory.
+                :: cam create-js-app .
 
                 {"-".center(50, "-")}
             """)
