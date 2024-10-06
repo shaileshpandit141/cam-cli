@@ -16,8 +16,10 @@ cam/run/run.py
 cam/templates/__init__.py
 cam/utils/__init__.py
 cam/utils/format.py
-mycliapp.egg-info/PKG-INFO
-mycliapp.egg-info/SOURCES.txt
-mycliapp.egg-info/dependency_links.txt
-mycliapp.egg-info/entry_points.txt
-mycliapp.egg-info/top_level.txt
+cam_cli.egg-info/PKG-INFO
+cam_cli.egg-info/SOURCES.txt
+cam_cli.egg-info/dependency_links.txt
+cam_cli.egg-info/entry_points.txt
+cam_cli.egg-info/not-zip-safe
+cam_cli.egg-info/requires.txt
+cam_cli.egg-info/top_level.txt
