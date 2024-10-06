@@ -1,3 +1,5 @@
+LICENSE.txt
+README.md
 setup.py
 cam/__init__.py
 cam/controller.py
@@ -9,6 +11,8 @@ cam/command/__init__.py
 cam/command/commad.py
 cam/create_app/__init__.py
 cam/create_app/create_app.py
+cam/run/__init__.py
+cam/run/run.py
 cam/templates/__init__.py
 cam/utils/__init__.py
 mycliapp.egg-info/PKG-INFO

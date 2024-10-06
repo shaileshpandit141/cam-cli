@@ -1,6 +1,7 @@
 from sys import argv
 from cam.command.commad import get_commans
 from cam.create_app.create_app import CreateApp
+from cam.run.run import run
 from cam.app_tree.java_script_tree import java_script_tree
 
 
@@ -30,5 +31,9 @@ def controller():
         if len(command_options) <=0:
             return "Oop's app_name can not be empty enter . or other valid name."
         print("py module created.")
+    
+    elif command_name.lower() == 'run': 
+        response = run()
+        return response
     else:
         return "Invalid command"

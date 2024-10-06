@@ -1,4 +1,7 @@
 import os
+import json
+from livereload import Server
+from tornado.autoreload import watch
 
 
 class CreateApp:
@@ -20,20 +23,17 @@ class CreateApp:
             if isinstance(content_or_subtree, dict):
                 # Create directory
                 os.makedirs(path, exist_ok=True)
-                print(f"Created directory: {path}")
+                print(f'Created directory: {path}')
                 # Recursively create the structure within the directory
                 self.__create_structure(path, content_or_subtree)
             else:
                 # Create file and write content
-                with open(path, "w") as file:
+                with open(path, 'w') as file:
                     if content_or_subtree is None:
                         file.write('')
                     else:
                         file.write(content_or_subtree)
-                print(f"Created file: {path} with content")
-
-    def run(self):
-        pass
+                print(f'Created file: {path} with content')
 
     def git_init(self):
         pass
