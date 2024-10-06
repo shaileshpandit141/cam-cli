@@ -1,0 +1,154 @@
+# cam CLI
+
+cam CLI is a command-line tool for creating boilerplate code for various types of applications including vanilla JavaScript frontend web apps, Python module, Flask app, and etc.
+
+### Installation
+You can install cam CLI using pip and pip3:
+  ```shell
+  pip3 install cam
+  ```
+
+### Command list
+  - cam create-js-app .
+  - cam create-py-module .
+  - cam create-flask-app .
+  - cam create-js-app <app_name>
+  - cam create-py-module <app_name>
+  - cam create-flask-app <app_name>
+  - cam run
+  
+  **note:** . mains create app in current directory.
+
+### Usage
+
+Once installed, you can use the following commands to create different types of applications:
+
+### Create a Vanilla JavaScript Frontend Web App
+**Command**
+```shell
+cam create-js-app <app_name>
+```
+**Nagivate to <app_name> directory**
+```bash
+cam run
+```
+it will start the development server.
+
+**Directory tree**
+```
+app_name/
+│
+├── assets/
+│   ├── icons/
+|   |   └── favicon.svg
+|   └── images/
+|
+├── meta/
+│   ├── config_script.js
+│   └── config_styles.css
+|
+├── src/
+│   ├── index.js
+│   └── other_js_files
+|
+├── styles/
+│   ├── styles.css
+│   └── other_css_files
+|
+├── .gitignore
+├── index.html
+├── LICENSE.txt
+└── README.md
+```
+
+### Create a Python Module
+**Command**
+```shell
+cam create-py-module <module_name>
+```
+**Nagivate to <app_name> directory**
+```bash
+cam run
+```
+it will run the python module for testing.
+
+**Directory tree**
+```
+module_name/
+│
+├── docs/
+|   └── index.md
+|
+├── module_name/
+│   ├── utils/
+|   |   └── __init__.py
+│   ├── __init__.py
+│   └── main.py
+|
+├── tests/
+│   └── test.py
+|
+├── config.py
+├── .gitignore
+├── LICENSE.txt
+├── README.md
+└── requirements.txt
+```
+
+### Create a Flask App
+**Command**
+```shell
+admin create-flask-app <app_name>
+```
+**Nagivate to <app_name> directory**
+```bash
+cam run
+```
+it will start the flask development server.
+
+**Directory tree**
+```
+flask_app_name/
+│
+├── docs/
+|   └── index.md
+|
+├── src/
+│   ├── __init__.py
+│   ├── views.py
+│   ├── models.py
+│   ├── forms.py
+│   ├── static/
+│   │   ├── css/
+│   │   |    └── style.css
+|   |   ├── images/
+|   |   ├── icons/
+|   |   └── js/
+|   |       └── script.html
+│   ├── templates/
+│   │   ├── base.html
+│   │   └── home.html
+│   └── utils/
+│       └── helper_functions.py
+│
+├── tests/
+│   └── test.py
+│
+├── config.py
+├── .gitignore
+├── LICENSE.txt
+├── README.md
+├── run.py
+└── requirements.txt
+```
+
+### Contributing
+Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
+
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+### Author
+If you have any questions or need assistance with this project, please contact `Shailesh` at `shaileshpandit141@gmail.com`.
+
+Thank you for using `cam` CLI.

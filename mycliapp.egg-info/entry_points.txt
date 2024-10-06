@@ -1,0 +1,2 @@
+[console_scripts]
+cam = cam.main:main
