@@ -3,7 +3,7 @@ from cam.command.commad import get_commans
 from cam.create_app.create_app import CreateApp
 from cam.run.run import run
 from cam.utils.format import format
-from cam.app_tree.java_script_tree import java_script_tree
+from cam.app_tree.tree.javascript_tree import javascript_tree
 
 
 def controller():
@@ -29,7 +29,7 @@ def controller():
             :: cam create-js-app <app_name>
             :: cam create-py-module <module_name>
             :: cam create-flask-app <app_name>
-            
+
             create an app with in the current directiory.
             :: cam create-js-app .
             :: cam create-py-module .
@@ -51,7 +51,7 @@ def controller():
                 Example:
                 create an app with specific app name.
                 :: cam create-js-app <app_name>
-                
+
                 create an app with in the current directiory.
                 :: cam create-js-app .
 
@@ -61,12 +61,11 @@ def controller():
         # Perform creation of javascript app.
         app_name = command_options[0]
         try:
-            js_app = CreateApp(app_name, java_script_tree())
+            js_app = CreateApp(app_name, javascript_tree())
         except AssertionError as error:
             return error
-        print(':: JavaScript App creating...')
-        js_app.create()
-        print(':: JavaScript App created successful.')
+        response = js_app.create()
+        return response
 
     elif command_name.lower() == "create-py-module":
         if len(command_options) <=0:
@@ -87,7 +86,7 @@ def controller():
         # Perform creation of javascript app.
         print("py module created.")
 
-    elif command_name.lower() == 'run':
+    elif command_name.lower() == 'run' or command_name.lower() == 'start':
         response = run()
         return response
     else:
