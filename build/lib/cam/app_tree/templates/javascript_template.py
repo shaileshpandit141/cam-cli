@@ -170,19 +170,22 @@ def index_css() -> str:
         }
 
         #root {
-            padding-inline: 24px;
+            width: 100%;
+            height: fit-content;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            height: fit-content;
-            min-height: 100vh;
         }
         ''')
 
 def app_css() -> str:
     return format('''
+        /* #root styles for app */
+        #root {
+            padding-inline: 24px;
+            min-height: 100vh;
+        }
         /* app initial test styles */
         .app {
           display: flex;
