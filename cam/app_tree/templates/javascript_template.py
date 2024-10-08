@@ -143,6 +143,8 @@ def index_css() -> str:
         /* Force smooth scrolling */
         html {
             scroll-behavior: smooth;
+            overflow: hidden;
+            overflow-y: auto;
         }
 
         /* Reset strong and b to have normal font weight */
