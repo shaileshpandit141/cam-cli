@@ -13,7 +13,7 @@ def read_json() -> dict | None:
         data (dict or list): Python native data type containing the JSON content.
     '''
     try:
-        with open('./camconfig.json', 'r') as json_file:
+        with open('camconfig.json', 'r') as json_file:
             data = json.load(json_file)
         return data
     except FileNotFoundError:
