@@ -5,7 +5,7 @@ def camconfig_json() -> str:
         {
             "type": "js-app",
             "host": "localhost",
-            "port": 800,
+            "port": 3000,
             "path": {
                 "root": ".",
                 "watch": "."

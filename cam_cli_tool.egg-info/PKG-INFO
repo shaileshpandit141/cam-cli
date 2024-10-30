@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: cam-cli-tool
-Version: 0.2.4
+Version: 0.2.5
 Summary: cam CLI is a command-line tool for creating boilerplate code for various types of applications
 Home-page: https://github.com/shaileshpandit141/cam-cli
 Author: shailesh
@@ -11,6 +11,7 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
+Requires-Dist: livereload>=2.5
 
 # cam cli
 
