@@ -5,7 +5,7 @@ def main():
     message = controller()
 
     if message is not None:
-        print(f':: {message}')
+        print(f'{message}')
 
 
 if __name__ == "__main__":

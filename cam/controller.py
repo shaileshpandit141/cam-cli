@@ -12,7 +12,6 @@ def controller():
 
     if command_name is None:
         return format(f"""
-
             :: cam  <- command
 
             cam command Required at list one argument.
@@ -33,14 +32,12 @@ def controller():
             :: cam create-js-app .
             :: cam create-py-module .
             :: cam create-flask-app .
-
         """)
 
     # Command validation.
     if command_name.lower() == "create-js-app":
         if len(command_options) <=0:
             return format(f"""
-
                 :: cam create-js-app    <- command
 
                 cam create-js-app command required an app_name or . for current directory.
@@ -51,7 +48,6 @@ def controller():
 
                 create an app with in the current directiory.
                 :: cam create-js-app .
-
             """)
 
         # Perform creation of javascript app.
@@ -66,7 +62,6 @@ def controller():
     elif command_name.lower() == "create-py-module":
         if len(command_options) <=0:
             return format(f"""
-
                 :: cam create-py-module    <- command
 
                 cam create-py-module command required an module_name or . for current directory.
@@ -74,7 +69,6 @@ def controller():
                 Example:
                 :: cam create-py-module .    <- create an app with in the current directiory.
                 :: cam create-py-module <module_name>    <- create an app with specific module name.
-
             """)
 
         # Perform creation of javascript app.
