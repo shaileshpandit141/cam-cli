@@ -12,7 +12,6 @@ def controller():
 
     if command_name is None:
         return format(f"""
-            {"Help".center(50, "-")}
 
             :: cam  <- command
 
@@ -35,14 +34,12 @@ def controller():
             :: cam create-py-module .
             :: cam create-flask-app .
 
-            {"-".center(50, "-")}
         """)
 
     # Command validation.
     if command_name.lower() == "create-js-app":
         if len(command_options) <=0:
             return format(f"""
-                {" Error ".center(50, "-")}
 
                 :: cam create-js-app    <- command
 
@@ -55,7 +52,6 @@ def controller():
                 create an app with in the current directiory.
                 :: cam create-js-app .
 
-                {"-".center(50, "-")}
             """)
 
         # Perform creation of javascript app.
@@ -70,7 +66,6 @@ def controller():
     elif command_name.lower() == "create-py-module":
         if len(command_options) <=0:
             return format(f"""
-                {" Error ".center(50, "-")}
 
                 :: cam create-py-module    <- command
 
@@ -80,7 +75,6 @@ def controller():
                 :: cam create-py-module .    <- create an app with in the current directiory.
                 :: cam create-py-module <module_name>    <- create an app with specific module name.
 
-                {"-".center(50, "-")}
             """)
 
         # Perform creation of javascript app.

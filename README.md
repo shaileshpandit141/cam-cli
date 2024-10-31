@@ -1,6 +1,6 @@
 # cam cli
 
-cam cli is a command-line tool for creating boilerplate code for various types of applications including vanilla JavaScript frontend web apps, Python module, Flask app, and etc.
+cam cli is a command-line tool for creating boilerplate code for various types of applications including vanilla JavaScript frontend web apps, Python modules, Flask apps, etc.
 
 ### Installation
 [You can install cam cli using pip and pip3:](https://pypi.org/project/cam-cli-tool/)
@@ -8,7 +8,74 @@ cam cli is a command-line tool for creating boilerplate code for various types o
   ```shell
   pip3 install cam-cli-tool
   ```
+  **If you are on Windows OS you need to do this**
 
+  - If pip gives you a `WARNING` like this during installation:
+  ```shell
+  WARNING: The script cam.exe is installed in `C:\Users\Welcome\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz0n4kfra0p8\LocalCache\local-packages\Python310\Scripts` which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  ```
+
+  - Then you need to add the installation PATH of cam.exe to the Windows user environment variables. The PATH is displayed during installation. If you don't add it, Windows will display an error like this:
+  ```text
+  'cam' is not recognized as an internal or external command,
+  operable program or batch file.
+  ```
+
+  **Copy the Path from the Warning Message**
+
+  The path you need to add to your PATH environment variable is
+
+  - **Add the Directory to PATH manually**
+  1. Open the Start menu, search for `Environment Variables` and select `Edit the system environment variables`.
+
+  2. In the `System Properties` window, click on `Environment Variables`.
+
+  3. In the `Environment Variables` window, find the `Path` variable under `User variables` (for your user) and select it. Then, click `Edit`.
+
+  4. Click `New` and paste the path:
+  ```shell
+  C:\Users\Welcome\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz0n4kfra0p8\LocalCache\local-packages\Python310\Scripts
+  ```
+  5. Click `OK` to save the changes and close all the dialog boxes.
+
+  6. Restart Command Prompt
+  After updating the PATH, close any open Command Prompt windows and open a new one. Then try running:
+  ```shell
+  cam
+  ```
+
+  *This should now work without issues.*
+
+  - **You can also add an environment variable directly from the Command Prompt**
+
+  1. Open Command Prompt as Administrator
+  Search for "Command Prompt" in the Start menu, right-click it, and select Run as administrator.
+
+  2. Add the Directory to the PATH
+
+  Use the following command to add the directory to your PATH temporarily (for the current session):
+  ```shell
+  set PATH=%PATH%;C:\Users\Welcome\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz0n4kfra0p8\LocalCache\local-packages\Python310\Scripts
+  ```
+  Change the demo path to match the path displayed in the warning message
+
+  To add it permanently (so it persists across sessions), use this command:
+  ```shell
+  setx PATH "%PATH%;C:\Users\Welcome\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz0n4kfra0p8\LocalCache\local-packages\Python310\Scripts"
+  ```
+  Change the demo path to match the path displayed in the warning message
+
+  3. Restart Command Prompt
+  After running the command, close the Command Prompt and open a new one to ensure the new PATH is recognized.
+
+  4. Verify the Command
+  Now, you should be able to run:
+  ```shell
+  cam
+  ```
+
+  *This should now work without issues.*
 
 ### Command list
   - cam create-js-app .
@@ -18,8 +85,8 @@ cam cli is a command-line tool for creating boilerplate code for various types o
   - cam create-py-module <app_name>
   - cam create-flask-app <app_name>
   - cam run
-  
-  **note:** . mains create app in current directory.
+
+  **note:** . means create app in current directory.
 
 ### Usage
 
@@ -30,11 +97,11 @@ Once installed, you can use the following commands to create different types of 
 ```shell
 cam create-js-app <app_name>
 ```
-**Nagivate to <app_name> directory**
+**Navigate to <app_name> directory**
 ```bash
 cam run
 ```
-it will start the development server.
+It will start the development server.
 
 **Directory tree**
 ```
@@ -68,11 +135,11 @@ app_name/
 ```shell
 cam create-py-module <module_name>
 ```
-**Nagivate to <app_name> directory**
+**Navigate to <app_name> directory**
 ```bash
 cam run
 ```
-it will run the python module for testing.
+It will run the Python module for testing.
 
 **Directory tree**
 ```
@@ -100,13 +167,13 @@ module_name/
 ### Create a Flask App
 **Command**
 ```shell
-admin create-flask-app <app_name>
+cam create-flask-app <app_name>
 ```
-**Nagivate to <app_name> directory**
+**Navigate to <app_name> directory**
 ```bash
 cam run
 ```
-it will start the flask development server.
+It will start the Flask development server.
 
 **Directory tree**
 ```
