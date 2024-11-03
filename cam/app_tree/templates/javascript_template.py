@@ -177,8 +177,6 @@ def index_css() -> str:
             height: fit-content;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
         ''')
@@ -188,7 +186,9 @@ def app_css() -> str:
         /* #root styles for app */
         #root {
             padding-inline: 24px;
-            min-height: 100vh;
+            min-height: 100dvh;
+            align-items: center;
+            justify-content: center;
         }
         /* app initial test styles */
         .app {
@@ -219,11 +219,11 @@ def app_css() -> str:
             0% {
                 transform: scale(.8);
             }
-    
+
             50% {
                 transform: scale(1);
             }
-    
+
             100% {
                 transform: scale(.8);
             }
@@ -266,27 +266,31 @@ def app_css() -> str:
 
 def app_js() -> str:
     return format('''
-        const root = document.getElementById('root')
+        function initializeApp() {
+          const root = document.getElementById('root')
 
-        document.addEventListener('DOMContentLoaded', () => {
-          root.insertAdjacentHTML("beforeend", (() => (
-            `
+          function getElement(selector) {
+            return root.querySelector(selector)
+          }
+
+          root.insertAdjacentHTML("beforeend", `
             <div class="app">
               <div class="logo">00</div>
               <h1>Welcome to cam cli</h1>
-              <p>
-                This boilerplate includes all the necessary setup to build a frontend web app using vanilla JavaScript.      </p>
-              </p>
+              <p>This boilerplate includes all the necessary setup to build a frontend web app using vanilla JavaScript.</p>
               <button class="button">increment</button>
             </div>
-            `
-          ))())
+          `)
 
-          root.querySelector('.button').addEventListener('click', () => {
-            const logo = root.querySelector('.logo')
+          const logo = getElement('.logo')
+          const button = getElement('.button')
+
+          button.addEventListener('click', () => {
             let initialNum = parseInt(logo.innerHTML)
-            logo.innerHTML = initialNum < 9 ? `0${initialNum + 1}` : initialNum + 1
+            logo.innerHTML = String(initialNum + 1).padStart(2, '0')
           })
-        })
+        }
+
+        document.addEventListener('DOMContentLoaded', initializeApp)
 
         ''')
