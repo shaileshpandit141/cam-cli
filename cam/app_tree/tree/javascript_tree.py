@@ -1,11 +1,11 @@
+from cam.app_tree.templates.mit_licence import mit_license
 from cam.app_tree.templates.javascript_template import (
     camconfig_json,
     index_html,
     favicon_svg,
     index_css,
     app_css,
-    app_js
-    
+    app_js,
 )
 
 def javascript_tree() -> dict:
@@ -27,6 +27,7 @@ def javascript_tree() -> dict:
             },
             "camconfig.json": camconfig_json(),
             "index.html": index_html(),
-            "README.md": None
+            "README.md": None,
+            "LICENSE.txt": mit_license()
         }
     )
