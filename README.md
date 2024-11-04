@@ -1,6 +1,6 @@
-# cam cli
+# cam (core app manager) cli
 
-cam cli is a command-line tool for creating boilerplate code for various types of applications including vanilla JavaScript frontend web apps, Python modules, Flask apps, etc.
+cam (core app manager) cli is a command-line tool for creating boilerplate code for various types of applications including vanilla JavaScript frontend web apps, Python modules, Flask apps, etc.
 
 ### Installation
 [You can install cam cli using pip and pip3:](https://pypi.org/project/cam-cli-tool/)

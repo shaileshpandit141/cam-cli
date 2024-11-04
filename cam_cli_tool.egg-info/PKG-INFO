@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: cam-cli-tool
-Version: 0.2.8
+Version: 0.2.9
 Summary: cam CLI is a command-line tool for creating boilerplate code for various types of applications
 Home-page: https://github.com/shaileshpandit141/cam-cli
 Author: shailesh
@@ -11,11 +11,10 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
-Requires-Dist: livereload>=2.5
 
-# cam cli
+# cam (core app manager) cli
 
-cam cli is a command-line tool for creating boilerplate code for various types of applications including vanilla JavaScript frontend web apps, Python modules, Flask apps, etc.
+cam (core app manager) cli is a command-line tool for creating boilerplate code for various types of applications including vanilla JavaScript frontend web apps, Python modules, Flask apps, etc.
 
 ### Installation
 [You can install cam cli using pip and pip3:](https://pypi.org/project/cam-cli-tool/)

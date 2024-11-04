@@ -18,7 +18,7 @@ class CreateApp:
         Create the app tree with default content.
         '''
         # Consider the . directiroy to create a file tree.
-        if self.__is_file_exist(f'camconfig.json') or self.__is_file_exist(self.app_name):
+        if self.__is_file_exist('camconfig.json'):
             return 'This app is exist. try with an other name'
         else:
             print('JavaScript app is creating...\n')
@@ -27,15 +27,15 @@ class CreateApp:
             if self.app_name == '.':
                 return format(f'''
                     start the development server by uing cam commands like
-                    
+
                     :: cam run    <- command
                     :: cam start    <- command
                     ''')
             return format(f'''
                 start the development server by uing cam commands like
-                
+
                 :: cd {self.app_name}    <- navigate to created app
-                
+
                 :: cam run    <- command
                 :: cam start    <- command
                 ''')

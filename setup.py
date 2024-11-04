@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="cam-cli-tool",
-    version="0.2.8",
+    version="0.2.9",
     author="shailesh",
     author_email="shaileshpandit141@gmail.com.com",
     description=("""
