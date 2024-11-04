@@ -112,19 +112,15 @@ app_name/
 |   |   └── favicon.svg
 |   └── images/
 |
-├── meta/
-│   ├── config_script.js
-│   └── config_styles.css
-|
 ├── src/
-│   ├── index.js
-│   └── other_js_files
+│   ├── app.js
+│   └── utils.js
 |
 ├── styles/
-│   ├── styles.css
-│   └── other_css_files
+│   ├── app.css
+│   └── index.css
 |
-├── .gitignore
+├── camconfig.json
 ├── index.html
 ├── LICENSE.txt
 └── README.md
