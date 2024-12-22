@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: cam-cli-tool
-Version: 0.2.9
+Version: 0.2.10
 Summary: cam CLI is a command-line tool for creating boilerplate code for various types of applications
 Home-page: https://github.com/shaileshpandit141/cam-cli
 Author: shailesh
@@ -125,20 +125,13 @@ app_name/
 │   ├── icons/
 |   |   └── favicon.svg
 |   └── images/
-|
-├── meta/
-│   ├── config_script.js
-│   └── config_styles.css
-|
 ├── src/
-│   ├── index.js
-│   └── other_js_files
-|
+│   ├── app.js
+│   └── utils.js
 ├── styles/
-│   ├── styles.css
-│   └── other_css_files
-|
-├── .gitignore
+│   ├── app.css
+│   └── index.css
+├── camconfig.json
 ├── index.html
 ├── LICENSE.txt
 └── README.md
@@ -159,23 +152,18 @@ It will run the Python module for testing.
 ```
 module_name/
 │
-├── docs/
-|   └── index.md
-|
 ├── module_name/
-│   ├── utils/
-|   |   └── __init__.py
 │   ├── __init__.py
-│   └── main.py
-|
+│   ├── main.py
+│   └── utils.py
 ├── tests/
-│   └── test.py
-|
-├── config.py
-├── .gitignore
-├── LICENSE.txt
+│   ├── __init__.py
+│   ├── main.py
+│   └── utils.py
+├── setup.py
 ├── README.md
-└── requirements.txt
+├── LICENSE
+└── .gitignore
 ```
 
 ### Create a Flask App

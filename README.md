@@ -111,15 +111,12 @@ app_name/
 │   ├── icons/
 |   |   └── favicon.svg
 |   └── images/
-|
 ├── src/
 │   ├── app.js
 │   └── utils.js
-|
 ├── styles/
 │   ├── app.css
 │   └── index.css
-|
 ├── camconfig.json
 ├── index.html
 ├── LICENSE.txt
@@ -141,23 +138,18 @@ It will run the Python module for testing.
 ```
 module_name/
 │
-├── docs/
-|   └── index.md
-|
 ├── module_name/
-│   ├── utils/
-|   |   └── __init__.py
 │   ├── __init__.py
-│   └── main.py
-|
+│   ├── main.py
+│   └── utils.py
 ├── tests/
-│   └── test.py
-|
-├── config.py
-├── .gitignore
-├── LICENSE.txt
+│   ├── __init__.py
+│   ├── main.py
+│   └── utils.py
+├── setup.py
 ├── README.md
-└── requirements.txt
+├── LICENSE
+└── .gitignore
 ```
 
 ### Create a Flask App

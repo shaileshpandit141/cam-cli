@@ -7,8 +7,10 @@ cam/main.py
 cam/app_tree/__init__.py
 cam/app_tree/templates/__init__.py
 cam/app_tree/templates/javascript_template.py
+cam/app_tree/templates/mit_licence.py
 cam/app_tree/tree/__init__.py
 cam/app_tree/tree/javascript_tree.py
+cam/app_tree/tree/python_module_tree.py
 cam/command/__init__.py
 cam/command/commad.py
 cam/create_app/__init__.py

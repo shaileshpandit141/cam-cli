@@ -3,13 +3,13 @@ from cam.utils.format import format
 def camconfig_json() -> str:
     return format('''
         {
-            "type": "js-app",
-            "host": "localhost",
-            "port": 3000,
-            "path": {
-                "root": ".",
-                "watch": "."
-            }
+          "type": "js-app",
+          "host": "localhost",
+          "port": 3000,
+          "path": {
+            "root": ".",
+            "watch": "."
+          }
         }
 
         ''')

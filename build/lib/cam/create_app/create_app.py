@@ -1,7 +1,4 @@
-from os import system, path, makedirs
-import json
-from livereload import Server
-from tornado.autoreload import watch
+from os import path, makedirs
 from cam.utils.format import format
 
 class CreateApp:
@@ -25,7 +22,7 @@ class CreateApp:
             self.__create_structure('.', self.structure)
             print('\nJavaScript App created successful.\n')
             if self.app_name == '.':
-                return format(f'''
+                return format('''
                     start the development server by uing cam commands like
 
                     :: cam run    <- command

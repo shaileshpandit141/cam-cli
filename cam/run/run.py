@@ -1,6 +1,6 @@
 import os
 import json
-from livereload import Server
+from livereload import Server  # type: ignore
 from datetime import datetime
 from cam.utils.format import format
 
@@ -19,9 +19,9 @@ def read_json() -> dict | None:
             data = json.load(json_file)
         return data
     except FileNotFoundError:
-        print(f'Error: The file `camconfig.json` was not found.')
+        print('Error: The file `camconfig.json` was not found.')
     except json.JSONDecodeError:
-        print(f'Error: The file `camconfig.json` contains invalid JSON.')
+        print('Error: The file `camconfig.json` contains invalid JSON.')
 
 def get_current_time() -> str:
     '''
@@ -57,7 +57,7 @@ def serve(root_path: str, watch_path: str, host: str ='localhost', port: int = 8
             try:
                 new_port = int(new_port)
                 server.serve(root=root_path, port=new_port, host=host)
-            except Exception as error:
+            except Exception:
                 print('Enter a 4 digit port number.')
 
 def run():
@@ -73,7 +73,7 @@ def run():
 
     try:
         app_type: str = camconfig['type']
-    except Exception as error:
+    except Exception:
         return 'type key is not found in camconfig.json'
 
     # Validate camconfig.json data for running frontend devlopment server.
@@ -81,7 +81,7 @@ def run():
         # Get host from camconfig.json and validate it.
         try:
             HOST: str = camconfig['host']
-        except Exception as error:
+        except Exception:
             return 'host key is not found in camconfig.json'
         if not isinstance(HOST, str):
             return f'Invalid host ({HOST}) in camconfig.json'
@@ -91,7 +91,7 @@ def run():
         # Get port from camconfig.json and validate it.
         try:
             PORT: int = camconfig['port']
-        except Exception as error:
+        except Exception:
             return 'port key is not found in camconfig.json'
         if not isinstance(PORT, int):
             return f'Invalid port ({PORT}) in camconfig.json'
@@ -101,7 +101,7 @@ def run():
         # Get path from camconfig.json and validate it.
         try:
             PATH: dict = camconfig['path']
-        except Exception as error:
+        except Exception:
             return 'path key is not found in camconfig.json'
         if not isinstance(PATH, dict):
             return 'Invalid path config in camconfig.json'
@@ -110,7 +110,7 @@ def run():
         try:
             root_path = PATH['root']
             watch_path = PATH['watch']
-        except Exception as error:
+        except Exception:
             return 'root and watch key are not found in camconfig.json'
 
         serve(root_path=root_path, watch_path=watch_path, host=HOST, port=PORT)
