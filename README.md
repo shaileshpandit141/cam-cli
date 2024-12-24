@@ -106,11 +106,10 @@ It will start the development server.
 **Directory tree**
 ```
 app_name/
-│
 ├── assets/
 │   ├── icons/
-|   |   └── favicon.svg
-|   └── images/
+│   │   └── favicon.svg
+│   └── images/
 ├── src/
 │   ├── app.js
 │   └── utils.js
@@ -137,7 +136,6 @@ It will run the Python module for testing.
 **Directory tree**
 ```
 module_name/
-│
 ├── module_name/
 │   ├── __init__.py
 │   ├── main.py
@@ -146,6 +144,7 @@ module_name/
 │   ├── __init__.py
 │   ├── main.py
 │   └── utils.py
+├── camconfig.json
 ├── setup.py
 ├── README.md
 ├── LICENSE
@@ -166,10 +165,8 @@ It will start the Flask development server.
 **Directory tree**
 ```
 flask_app_name/
-│
 ├── docs/
-|   └── index.md
-|
+│   └── index.md
 ├── src/
 │   ├── __init__.py
 │   ├── views.py
@@ -177,21 +174,19 @@ flask_app_name/
 │   ├── forms.py
 │   ├── static/
 │   │   ├── css/
-│   │   |    └── style.css
-|   |   ├── images/
-|   |   ├── icons/
-|   |   └── js/
-|   |       └── script.html
+│   │   │   └── style.css
+│   │   ├── images/
+│   │   ├── icons/
+│   │   └── js/
+│   │       └── script.html
 │   ├── templates/
 │   │   ├── base.html
 │   │   └── home.html
 │   └── utils/
 │       └── helper_functions.py
-│
 ├── tests/
 │   └── test.py
-│
-├── config.py
+├── camconfig.json
 ├── .gitignore
 ├── LICENSE.txt
 ├── README.md
