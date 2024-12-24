@@ -61,58 +61,67 @@ def serve(root_path: str, watch_path: str, host: str ='localhost', port: int = 8
                 print('Enter a 4 digit port number.')
 
 def run():
-    if not (os.path.exists('camconfig.json')):
-        return 'camconfig.json file is not exist.'
+    # Check if the configuration file exists
+    if not os.path.exists('camconfig.json'):
+        return 'camconfig.json file does not exist.'
 
+    # Read and validate the configuration
     camconfig = read_json()
-
-    if camconfig is None:
-        return 'Please configure the camconfig.js file.'
-    if not isinstance(camconfig, dict):
+    if not validate_camconfig_structure(camconfig):
         return 'Invalid camconfig.json'
 
-    try:
-        app_type: str = camconfig['type']
-    except Exception:
-        return 'type key is not found in camconfig.json'
-
-    # Validate camconfig.json data for running frontend devlopment server.
-    if app_type.lower() == 'js-app':
-        # Get host from camconfig.json and validate it.
-        try:
-            HOST: str = camconfig['host']
-        except Exception:
-            return 'host key is not found in camconfig.json'
-        if not isinstance(HOST, str):
-            return f'Invalid host ({HOST}) in camconfig.json'
-        if HOST != '' and len(HOST) != 6 and len(HOST) != 9 and len(HOST) != 13:
-            return f'Invalid host ({HOST}) in camconfig.json'
-
-        # Get port from camconfig.json and validate it.
-        try:
-            PORT: int = camconfig['port']
-        except Exception:
-            return 'port key is not found in camconfig.json'
-        if not isinstance(PORT, int):
-            return f'Invalid port ({PORT}) in camconfig.json'
-        if len(str(PORT)) < 4:
-            return f'Invalid PORT ({PORT}) in camconfig.json'
-            
-        # Get path from camconfig.json and validate it.
-        try:
-            PATH: dict = camconfig['path']
-        except Exception:
-            return 'path key is not found in camconfig.json'
-        if not isinstance(PATH, dict):
-            return 'Invalid path config in camconfig.json'
-
-        # Get root and watch path from camconfig.json and validate its.
-        try:
-            root_path = PATH['root']
-            watch_path = PATH['watch']
-        except Exception:
-            return 'root and watch key are not found in camconfig.json'
-
-        serve(root_path=root_path, watch_path=watch_path, host=HOST, port=PORT)
+    app_type = camconfig.get('type', '').lower()  # type: ignore
+    if app_type == 'js-app':
+        result = validate_and_serve_js_app(camconfig)
+        return result if result else None
     else:
         return 'value of type key is invalid in camconfig.json'
+
+
+def validate_camconfig_structure(camconfig):
+    if camconfig is None:
+        print('Please configure the camconfig.json file.')
+        return False
+    if not isinstance(camconfig, dict):
+        print('camconfig.json must be a dictionary.')
+        return False
+    return True
+
+
+def validate_and_serve_js_app(camconfig):
+    # Validate and get host
+    HOST = camconfig.get('host')
+    if not validate_host(HOST):
+        return f'Invalid host ({HOST}) in camconfig.json'
+
+    # Validate and get port
+    PORT = camconfig.get('port')
+    if not validate_port(PORT):
+        return f'Invalid port ({PORT}) in camconfig.json'
+
+    # Validate and get path
+    PATH = camconfig.get('path')
+    if not validate_path(PATH):
+        return 'Invalid path config in camconfig.json'
+
+    # Validate root and watch paths
+    root_path = PATH.get('root')
+    watch_path = PATH.get('watch')
+    if not root_path or not watch_path:
+        return 'root and watch keys are not found in camconfig.json'
+
+    # Start the server
+    serve(root_path=root_path, watch_path=watch_path, host=HOST, port=PORT)
+    return None
+
+
+def validate_host(host):
+    return isinstance(host, str) and (len(host) in {6, 9, 13} or host == '')
+
+
+def validate_port(port):
+    return isinstance(port, int) and len(str(port)) >= 4
+
+
+def validate_path(path):
+    return isinstance(path, dict) and 'root' in path and 'watch' in path

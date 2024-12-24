@@ -2,8 +2,7 @@ from cam.command.commad import get_commans
 from cam.create_app.create_app import CreateApp
 from cam.run.run import run
 from cam.utils.format import format
-from cam.app_tree.tree.javascript_tree import javascript_tree
-from cam.app_tree.tree.python_module_tree import python_module_tree
+from cam.app_tree import js_tree, py_module_tree
 
 
 def controller():
@@ -53,7 +52,7 @@ def controller():
         # Perform creation of javascript app.
         app_name = command_options[0]
         try:
-            js_app = CreateApp(app_name, javascript_tree())
+            js_app = CreateApp(app_name, js_tree())
         except AssertionError as error:
             return error
         response = js_app.create()
@@ -78,7 +77,7 @@ def controller():
         # Perform creation of javascript app.
         module_name = command_options[0]
         try:
-            js_app = CreateApp(module_name, python_module_tree())
+            js_app = CreateApp(module_name, py_module_tree())
         except AssertionError as error:
             return error
         response = js_app.create()

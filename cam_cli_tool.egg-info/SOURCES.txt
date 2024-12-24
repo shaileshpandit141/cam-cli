@@ -5,12 +5,11 @@ cam/__init__.py
 cam/controller.py
 cam/main.py
 cam/app_tree/__init__.py
-cam/app_tree/templates/__init__.py
-cam/app_tree/templates/javascript_template.py
-cam/app_tree/templates/mit_licence.py
-cam/app_tree/tree/__init__.py
-cam/app_tree/tree/javascript_tree.py
-cam/app_tree/tree/python_module_tree.py
+cam/app_tree/js_tree/__init__.py
+cam/app_tree/js_tree/templates.py
+cam/app_tree/js_tree/tree.py
+cam/app_tree/py_module_tree/__init__.py
+cam/app_tree/py_module_tree/tree.py
 cam/command/__init__.py
 cam/command/commad.py
 cam/create_app/__init__.py
@@ -19,6 +18,7 @@ cam/run/__init__.py
 cam/run/run.py
 cam/utils/__init__.py
 cam/utils/format.py
+cam/utils/mit_licence.py
 cam_cli_tool.egg-info/PKG-INFO
 cam_cli_tool.egg-info/SOURCES.txt
 cam_cli_tool.egg-info/dependency_links.txt
