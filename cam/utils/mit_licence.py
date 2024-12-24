@@ -1,4 +1,4 @@
-from cam.utils.format import format
+from .format import format
 
 def mit_license(year: str = '[year]', full_name: str = '[fullname]'):
     return (format(f'''

@@ -1,6 +1,6 @@
-from cam.app_tree.templates.mit_licence import mit_license
+from cam.utils import mit_license
 
-def python_module_tree() -> dict:
+def py_module_tree() -> dict:
     return (
         {
             "module_name": {

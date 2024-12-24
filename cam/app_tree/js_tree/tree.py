@@ -1,5 +1,5 @@
-from cam.app_tree.templates.mit_licence import mit_license
-from cam.app_tree.templates.javascript_template import (
+from cam.utils import mit_license
+from templates import (
     camconfig_json,
     index_html,
     favicon_svg,
@@ -8,7 +8,7 @@ from cam.app_tree.templates.javascript_template import (
     app_js,
 )
 
-def javascript_tree() -> dict:
+def js_tree() -> dict:
     return (
         {
             "assets": {
