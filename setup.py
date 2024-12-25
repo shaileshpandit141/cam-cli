@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="cam-cli-tool",
-    version="0.2.14",
+    version="0.2.15",
     author="shailesh",
     author_email="shaileshpandit141@gmail.com.com",
     description=("""
@@ -14,7 +14,7 @@ setup(
     """),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/shaileshpandit141/cam-cli",
+    url="https://github.com/shaileshpandit141/cam-cli-tool.git",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

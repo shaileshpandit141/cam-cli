@@ -1,4 +1,4 @@
-from cam.utils import mit_license
+from cam_cli_tool.utils import mit_license
 
 def py_module_tree() -> dict:
     return (

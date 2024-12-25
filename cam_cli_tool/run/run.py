@@ -2,7 +2,7 @@ import os
 import json
 from livereload import Server  # type: ignore
 from datetime import datetime
-from cam.utils import format
+from cam_cli_tool.utils import format
 
 def read_json() -> dict | None:
     '''

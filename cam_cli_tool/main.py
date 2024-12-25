@@ -1,4 +1,4 @@
-from cam.controller import controller
+from cam_cli_tool.controller import controller
 
 
 def main():

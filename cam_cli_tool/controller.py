@@ -1,8 +1,8 @@
-from cam.command import get_commans
-from cam.create_app import CreateApp
-from cam.run import run
-from cam.utils import format
-from cam.app_tree import js_tree, py_module_tree
+from cam_cli_tool.command import get_commans
+from cam_cli_tool.create_app import CreateApp
+from cam_cli_tool.run import run
+from cam_cli_tool.utils import format
+from cam_cli_tool.app_tree import js_tree, py_module_tree
 
 
 def controller():
