@@ -1,5 +1,5 @@
 from os import path, makedirs
-from utils.format import format
+from cam.utils import format
 
 class CreateApp:
     def __init__(self, app_name: str, structure: dict) -> None:

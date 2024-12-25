@@ -1,4 +1,4 @@
-from utils import mit_license
+from cam.utils import mit_license
 from .templates import (
     camconfig_json,
     index_html,
