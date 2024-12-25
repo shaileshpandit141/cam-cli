@@ -9,7 +9,7 @@ def get_commans() -> tuple[str, str | None , list[str]]:
     try:
         command_name = commands[1]
         command_options = commands[2:]
-    except IndexError as error:
+    except IndexError:
         pass
 
     return (absolute_path, command_name, command_options)

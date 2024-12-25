@@ -1,5 +1,5 @@
-from cam.utils import mit_license
-from templates import (
+from utils import mit_license
+from .templates import (
     camconfig_json,
     index_html,
     favicon_svg,

@@ -1,4 +1,4 @@
-from cam.utils import format
+from utils import format
 
 def camconfig_json() -> str:
     return format('''
