@@ -11,7 +11,7 @@ cam/app_tree/js_tree/tree.py
 cam/app_tree/py_module_tree/__init__.py
 cam/app_tree/py_module_tree/tree.py
 cam/command/__init__.py
-cam/command/commad.py
+cam/command/command.py
 cam/create_app/__init__.py
 cam/create_app/create_app.py
 cam/run/__init__.py
